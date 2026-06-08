@@ -1,0 +1,15 @@
+{
+  "PatientenDialog.tsx": {
+    "vorname": "z. B. Anna",
+    "nachname": "z. B. Müller",
+    "geburtsdatum": "Geburtsdatum eingeben",
+    "telefonnummer": "z. B. +49 30 123456",
+    "email": "z. B. anna.mueller@example.com"
+  },
+  "TerminbuchungenDialog.tsx": {
+    "patient": "Patient wählen",
+    "termin": "Datum und Uhrzeit wählen",
+    "behandlungsraum": "z. B. Raum 1, Raum 2",
+    "bemerkungen": "Besonderheiten, allergische Reaktionen, Fasting-Status..."
+  }
+}

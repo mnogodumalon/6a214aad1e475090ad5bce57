@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "patienten",
+      "app_id": "6a214a984f40c7c263b3488a",
+      "path": "/rest/apps/6a214a984f40c7c263b3488a/records",
+      "allowed_fields": [
+        "vorname",
+        "nachname",
+        "geburtsdatum",
+        "telefonnummer",
+        "email"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Patienten — Formular"
+    },
+    {
+      "entity": "terminbuchungen",
+      "app_id": "6a214a9c6f620e33f3b2586e",
+      "path": "/rest/apps/6a214a9c6f620e33f3b2586e/records",
+      "allowed_fields": [
+        "termin",
+        "behandlungsraum",
+        "bemerkungen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Terminbuchungen — Formular"
+    }
+  ]
+}

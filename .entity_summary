@@ -1,0 +1,3 @@
+- Patienten (patienten): vorname[string/text], nachname[string/text], geburtsdatum[date/date], telefonnummer[string/tel], email[string/email]
+- Terminbuchungen (terminbuchungen): patient[applookup/select], termin[date/datetimeminute], behandlungsraum[lookup/radio], bemerkungen[string/textarea]
+  → patient links to app_id 6a214a984f40c7c263b3488a

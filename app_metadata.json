@@ -1,0 +1,167 @@
+{
+  "appgroup_id": "6a214aad1e475090ad5bce57",
+  "appgroup_name": "Blutabnahme-Terminverwaltung",
+  "apps": {
+    "patienten": {
+      "app_id": "6a214a984f40c7c263b3488a",
+      "name": "Patienten",
+      "main": false,
+      "controls": {
+        "vorname": {
+          "identifier": "vorname",
+          "label": "Vorname",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "nachname": {
+          "identifier": "nachname",
+          "label": "Nachname",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "geburtsdatum": {
+          "identifier": "geburtsdatum",
+          "label": "Geburtsdatum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day (or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` (or `null`/`None`).\n\nFor example: `2000-02-29`.\n\nFor `POST`/`PUT`/`PATCH` requests the REST API uses a liberal parsing approach so that strings like `2026`, `February 29, 2000 12:34 MEST`, `letztes Jahr` etc. will be accepted as value date values. However this runs the risk of parsing ambiguous values incorrectly. To ensure reliable parsing it is best to use the canonical format specified above.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "telefonnummer": {
+          "identifier": "telefonnummer",
+          "label": "Telefonnummer",
+          "type": "string",
+          "subtype": "tel",
+          "fulltype": "string/tel",
+          "description": "A valid telephone number (or `null`/`None`). Might include country prefix and should include area code.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "email": {
+          "identifier": "email",
+          "label": "E-Mail-Adresse",
+          "type": "string",
+          "subtype": "email",
+          "fulltype": "string/email",
+          "description": "A valid email address (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        }
+      }
+    },
+    "terminbuchungen": {
+      "app_id": "6a214a9c6f620e33f3b2586e",
+      "name": "Terminbuchungen",
+      "main": false,
+      "controls": {
+        "patient": {
+          "identifier": "patient",
+          "label": "Patient",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to a LivingApp record from the target lookup app 'Patienten' with the id `6a214a984f40c7c263b3488a` (or `null`/`None`).\n\nThe field value will be a valid record URL in the form `https://my.living-apps.de/rest/apps/6a214a984f40c7c263b3488a/records/<record-id>` (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_app": "https://my.living-apps.de/rest/apps/6a214a984f40c7c263b3488a"
+        },
+        "termin": {
+          "identifier": "termin",
+          "label": "Termin (Datum und Uhrzeit)",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute (or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` (or `null`/`None`).\n\nFor example: `2000-02-29T11:30`.\n\nFor `POST`/`PUT`/`PATCH` requests the REST API uses a liberal parsing approach so that strings like `2026`, `February 29, 2000 12:34 MEST`, `letztes Jahr` etc. will be accepted as value datetime values. However this runs the risk of parsing ambiguous values incorrectly. To ensure reliable parsing it is best to use the canonical format specified above.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "behandlungsraum": {
+          "identifier": "behandlungsraum",
+          "label": "Behandlungsraum",
+          "type": "lookup",
+          "subtype": "radio",
+          "fulltype": "lookup/radio",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as radio button fields in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_data": {
+            "raum_2": "Raum 2",
+            "raum_3": "Raum 3",
+            "raum_1": "Raum 1"
+          }
+        },
+        "bemerkungen": {
+          "identifier": "bemerkungen",
+          "label": "Bemerkungen",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        }
+      }
+    }
+  },
+  "metadata": {
+    "apps_list": [
+      "Patienten",
+      "Terminbuchungen"
+    ]
+  }
+}

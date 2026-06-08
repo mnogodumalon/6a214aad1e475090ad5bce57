@@ -1,0 +1,16 @@
+{
+  "entities": {
+    "Patienten": {
+      "placeholders_set": 5,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity (Vorname, Nachname, Geburtsdatum, Kontakt), keine Berechnungen möglich. Keine numerischen Felder, keine Lookup-Preis-Ketten, keine Datums-Paare für Dauer-Berechnungen."
+    },
+    "Terminbuchungen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["termin"],
+      "computed_keys": [],
+      "reason": "Terminverwaltung ohne Finanz-Logik. Termin standardmäßig heute (mit Uhrzeit), Patient/Raum/Bemerkungen sind nicht berechenbar. Kein applookup mit Preis-Target, keine Mengenfelder, keine Datums-Dauer-Paare für Kosten-Multiplikation."
+    }
+  }
+}
