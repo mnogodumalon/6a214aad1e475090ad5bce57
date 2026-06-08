@@ -6,7 +6,6 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import PatientenPage from '@/pages/PatientenPage';
 import PatientenDetailPage from '@/pages/PatientenDetailPage';
@@ -31,7 +30,7 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="patienten" element={<PatientenPage />} />
                 <Route path="patienten/:id" element={<PatientenDetailPage />} />
                 <Route path="terminbuchungen" element={<TerminbuchungenPage />} />
